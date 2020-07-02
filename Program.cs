@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Task
 {
@@ -11,13 +11,12 @@ namespace Task
             size = int.Parse(Console.ReadLine());
             for (int line = size ; line >= 0; line--)
             {
-                for (temp = 0; temp < line; temp ++)
+                for (temp = 0; temp < size; temp ++)
                 {
-                    Console.Write(" ");
-                }
-                for (temp = temp; temp < size; temp ++)
-                {
-                    Console.Write("*");
+                    if (temp < line)
+                        Console.Write(" ");
+                    else
+                        Console.Write("*");
                 }
                 Console.WriteLine();
             }
@@ -25,3 +24,4 @@ namespace Task
         }
     }
 }
+
